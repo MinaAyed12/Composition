@@ -1,2 +1,2 @@
 # Composition-Template
-## One simple page with Sass
+### One simple page with Sass
