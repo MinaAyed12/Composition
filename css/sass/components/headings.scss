@@ -1,0 +1,28 @@
+/* Start Heading With Border */
+.heading-border {
+	position: relative;
+	h2 {
+		width: fit-content;
+		padding: 5px 40px;
+		margin: 50px auto;
+		background-color: $mainColor;
+		color: white;
+		text-align: center;
+		border-radius: 15px;
+		font-weight: normal;
+		&:before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 1.5px;
+			background-color: $secondaryColor;
+			top: 50%;
+			left: 0;
+			z-index: -1;
+		}
+		@media #{$maxMobile} {
+			font-size: 22px;
+		}
+	}
+}
+/* End Heading With Border */

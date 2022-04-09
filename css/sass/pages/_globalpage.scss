@@ -1,0 +1,17 @@
+/* Start Global Rules */
+* {
+	@include prefixer(box-sizing, border-box, webkit moz);
+}
+body {
+	font-family: Arial, Tahoma, sans-serif;
+}
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+/* End Global Rules */

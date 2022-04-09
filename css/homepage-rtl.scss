@@ -1,0 +1,27 @@
+// Helpers
+@import 'sass/helpers/variables';
+// Edit Variables
+@if $pageDirection == ltr {
+	$floatLeft: left;
+	$floatRight: right;
+	$textAlign: left;
+} @else {
+	$floatLeft: right;
+	$floatRight: left;
+	$textAlign: right;
+}
+/* Start Header */
+.header {
+	.container {
+		.logo {
+			text-align: $textAlign;
+			@media #{$maxSmall} {
+				text-align: center;
+			}
+			@media (max-width: 676px) {
+				text-align: $textAlign;
+			}
+		}
+	}
+}
+/* End Header */

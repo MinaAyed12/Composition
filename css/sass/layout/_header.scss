@@ -1,0 +1,88 @@
+// Helpers
+@import 'sass/helpers/variables';
+// Buttons
+@import 'sass/components/buttons';
+/* Start Header */
+.header {
+	padding: 30px 0;
+	@include prefixer(
+		box-shadow,
+		5px 0 5px 1px $secondaryColor,
+		(webkit, moz, o)
+	);
+	.container {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		@media #{$maxSmall} {
+			justify-content: center;
+		}
+		@media #{$minMedium} {
+			justify-content: space-between;
+		}
+		.logo {
+			flex: 1;
+			text-align: $textAlign;
+			@media #{$maxSmall} {
+				text-align: center;
+			}
+			@media (max-width: 676px) {
+				text-align: $textAlign;
+			}
+			h1 {
+				margin: 0 0 10px;
+				color: #333;
+			}
+			p {
+				font-size: 15px;
+				color: $secondaryColor;
+				margin: 0;
+				word-spacing: -2px;
+				@media #{$maxSmall} {
+					margin-bottom: 1em;
+				}
+			}
+		}
+		.navbar {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			background-color: $mainColor;
+			max-width: 700px;
+			border-radius: 10px;
+			overflow: hidden;
+			@media (max-width: 676px) {
+				display: none;
+				width: 100%;
+				height: auto;
+				padding: 0;
+			}
+			@media (min-width: 677px) {
+				display: flex !important;
+			}
+			li {
+				a {
+					display: inline-block;
+					font-size: 18px;
+					padding: 20px;
+					color: #eee;
+					@include prefixer(transition, $mainTransition, (webkit, moz, o));
+					&:hover {
+						background-color: #b64242;
+						color: white;
+					}
+					@media (max-width: 676px) {
+						display: block;
+						padding: 15px;
+						font-size: 15px;
+						text-align: center;
+						&:not(:last-of-type) {
+							border-bottom: 2px solid #b64242;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* End Header */

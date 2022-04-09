@@ -1,0 +1,12 @@
+// Helpers
+@import 'sass/helpers/variables';
+@import 'sass/helpers/mixins';
+// Components
+@import 'sass/components/headings';
+// Layout
+@import 'sass/layout/header';
+@import 'sass/layout/grid';
+@import 'sass/layout/footer';
+// Pages
+@import 'sass/pages/globalpage';
+@import 'sass/pages/homepage';

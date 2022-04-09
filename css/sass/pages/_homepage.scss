@@ -1,0 +1,139 @@
+/* Start Slider */
+.slider {
+	q {
+		display: block;
+		margin: 40px auto;
+		max-width: 800px;
+		text-align: center;
+		font-size: 20px;
+		font-style: italic;
+		word-spacing: -2px;
+		color: #444;
+		line-height: 1.5;
+		@media #{$maxMobile} {
+			font-size: 18px;
+		}
+	}
+	img {
+		max-width: 100%;
+	}
+	.bullets {
+		text-align: center;
+		margin-top: 15px;
+		li {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			background-color: $secondaryColor;
+			border: 3px solid $secondaryColor;
+			border-radius: 50%;
+			cursor: pointer;
+			&:hover,
+			&.active {
+				@include prefixer(transition, $mainTransition);
+				background-color: white;
+				border: 3px solid black;
+			}
+			@media #{$maxMobile} {
+				width: 15px;
+				height: 15px;
+				&:hover {
+					background-color: $secondaryColor;
+					border: 3px solid $secondaryColor;
+				}
+			}
+		}
+	}
+}
+/* End Slider */
+/* Start Services */
+.services {
+	.content {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 20px;
+		.service {
+			@media #{$maxSmall} {
+				&:not(:last-of-type) {
+					margin-bottom: 20px;
+				}
+			}
+			.title {
+				display: flex;
+				align-items: center;
+				h3 {
+					margin: 0 15px;
+				}
+			}
+			.description {
+				color: $secondaryColor;
+				line-height: 1.5;
+			}
+			.read-more {
+				color: $mainColor;
+			}
+		}
+	}
+}
+/* End Services */
+/* Start Players */
+.players {
+	.content {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		gap: 20px;
+		@media #{$maxMobile} {
+			text-align: center;
+		}
+		.player {
+			@media #{$maxSmall} {
+				margin-bottom: 20px;
+			}
+			img {
+				max-width: 100%;
+			}
+			.player-name {
+				display: flex;
+				align-items: center;
+				margin-top: 10px;
+				span {
+					margin: 0 5px;
+				}
+				h4 {
+					margin: 0;
+				}
+				@media #{$maxSmall} {
+					display: block;
+					h4,
+					span {
+						display: inline-block;
+					}
+				}
+			}
+			p {
+				color: $secondaryColor;
+				line-height: 1.5;
+				margin: 5px auto;
+			}
+			.view-profile {
+				color: $mainColor;
+			}
+		}
+	}
+}
+/* End Players */
+/* Start Gallery */
+.gallery {
+	.content {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+		gap: 40px;
+		padding-bottom: 50px;
+		.image {
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+}
+/* End Gallery */

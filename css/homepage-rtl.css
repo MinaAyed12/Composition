@@ -1,0 +1,18 @@
+/* Start Header */
+.header .container .logo {
+  text-align: right;
+}
+@media (max-width: 991px) {
+  .header .container .logo {
+    text-align: center;
+  }
+}
+@media (max-width: 676px) {
+  .header .container .logo {
+    text-align: right;
+  }
+}
+
+/* End Header */
+
+/*# sourceMappingURL=homepage-rtl.css.map */
